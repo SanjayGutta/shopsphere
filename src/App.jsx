@@ -1,0 +1,24 @@
+import React from 'react'
+import LandingPage from './Components/LandingPage'
+import { Route, Routes } from 'react-router-dom'
+import "./App.css"
+import AdminPortal from './Components/Admin/AdminPortal'
+import UsersPortal from './Components/Users/UsersPortal'
+import PageNotFound from './Components/Pages/PageNotFound'
+
+const App = () => {
+  return (
+    <>
+    <Routes>
+      <Route element={<LandingPage/>} path='/'/>
+      <Route element={<AdminPortal/>} path='/adminportal/*'/>
+      <Route element={<UsersPortal/>} path='/usersportal/*'/>
+      <Route element={<PageNotFound/>} path='*'/>
+    </Routes>
+    
+    
+    </>
+  )
+}
+
+export default App
